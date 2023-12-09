@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Ответы К.Поляков",
+  "version": "2.2",
+  "description": "Автоматическое заполнение тестов с сайта К.Поляков",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon48.ico"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon48.ico"
+  }
+}
